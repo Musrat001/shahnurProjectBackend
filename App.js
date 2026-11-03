@@ -19,10 +19,10 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // for influencer
-import userRouter from "./Routes/Influencer.routes.js";
+import userRouter from "./src/Routes/Influencer.routes.js";
 app.use("/api/v1/users/influencer", userRouter);
 
 // for brand
-import brandRoutes from "./Routes/Brand.routes.js"
+import brandRoutes from "./src/Routes/Brand.routes.js"
 app.use("/api/v1/users/brand", brandRoutes);
 export default app;
