@@ -18,6 +18,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+// google 
+import googleAuthRoutes from "./src/Routes/Google.routes.js";
+app.use("/auth", googleAuthRoutes);
+
 // for influencer
 import userRouter from "./src/Routes/Influencer.routes.js";
 app.use("/api/v1/users/influencer", userRouter);
